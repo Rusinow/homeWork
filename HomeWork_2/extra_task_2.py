@@ -1,4 +1,3 @@
-
 n = int(input('Введите число (от 3 до 20): '))
 
 def search_for_couples():
@@ -28,7 +27,18 @@ def finding_multiples():
         k += 1
     return multiples
 
-couples = search_for_couples()
-result = finding_multiples()
+def get_password():
+    '''создает из вложенных списков единый пароль'''
+    password_n = []
+    for i in result1:
+        if isinstance(i, list):
+            password_n.extend(i)
+        else:
+            password_n.append(i)
+    return password_n
 
-print(*result)
+couples = search_for_couples()
+result1 = finding_multiples()
+result = get_password()
+
+print('Для числа ', n, ' ', 'пароль ', *result, sep='')
