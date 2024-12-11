@@ -3,11 +3,9 @@ def send_email(message:str, recipient:str, sender = 'university.help@gmail.com')
     Проверка на отправку самому себе.
     Проверка на отправителя по умолчанию.'''
     if ('@' not in recipient) or ('@' not in sender):
-         return print(' Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
-    if not recipient.endswith('.com') and not recipient.endswith('ru') and not recipient.endswith('.net'):
-         return print(' Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
-    if not sender.endswith('.com') and not sender.endswith('ru') and not sender.endswith('.net'):
-         return print(' Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
+         return print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
+    if (not recipient.endswith(('.com', 'ru', 'net'))) or (not sender.endswith(('.com', 'ru', 'net'))):
+         return print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
     if sender == recipient:
          return print('Невозможно отправить писмо самому себе')
     elif sender == 'university.help@gmail.com':
@@ -15,7 +13,7 @@ def send_email(message:str, recipient:str, sender = 'university.help@gmail.com')
     else:
          return print('НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса ', sender, 'на адрес ', recipient)
 
-# Пример выполняемого кода (тесты):
+# # Пример выполняемого кода (тесты):
 # send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
 # send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 # send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
