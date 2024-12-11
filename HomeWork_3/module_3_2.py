@@ -7,7 +7,7 @@ def send_email(message:str, recipient:str, sender = 'university.help@gmail.com')
     if (not recipient.endswith(('.com', 'ru', 'net'))) or (not sender.endswith(('.com', 'ru', 'net'))):
          return print('Невозможно отправить письмо с адреса ', sender, 'на адрес', recipient)
     if sender == recipient:
-         return print('Невозможно отправить писмо самому себе')
+         return print('Нельзя отправить писмо самому себе!')
     elif sender == 'university.help@gmail.com':
          return print('Письмо успешно отправлено с адреса ', sender, 'на адрес ', recipient)
     else:
