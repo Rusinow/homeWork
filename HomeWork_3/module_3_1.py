@@ -1,18 +1,18 @@
 calls = 0
 
-def count_calls():
+def count_calls() -> int:
     '''подсчитывает вызов остальных функций'''
     global calls
     calls += 1
 
-def string_info(string):
+def string_info(string:str) -> tuple:
     ''' принимает аргумент - строку и возвращает кортеж из:
      длины этой строки, строку в верхнем регистре, строку в нижнем регистре'''
     count_calls()
     tuple_ = (len(string), string.upper(), string.lower())
     return tuple_
 
-def is_contains(string:str, list_to_search:list):
+def is_contains(string:str, list_to_search:list) -> bool:
     '''принимает два аргумента: строку и список,
      и возвращает True, если строка находится в этом списке, False - если отсутствует'''
     count_calls()
