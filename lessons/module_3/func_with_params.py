@@ -1,7 +1,6 @@
-def func_with_params(a, b=2,c=None):
+def func_with_params(a, b=2, c=None):
     if c is None:
-        c = []
-        c.append(a)
+        c = [a]
     print(c)
 
 
