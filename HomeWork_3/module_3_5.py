@@ -11,7 +11,7 @@ def get_multiplied_digits(number):
 
 # Пример результата выполнения программы:
 # Исходный код:
-# result = get_multiplied_digits(40203)
-# print(result)
-# result2 = get_multiplied_digits(402030)
-# print(result2)
+result = get_multiplied_digits(40203)
+print(result)
+result2 = get_multiplied_digits(402030)
+print(result2)
