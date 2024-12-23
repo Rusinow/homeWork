@@ -1,10 +1,8 @@
-def say_hi():
-    print("Hello, i'm from def in mod2")
+from mod1 import hello
 
-def main():
-    a = 5
-    b = 10
-    print('Hi')
+def good_word(name):
+    hello(name)
+    print('your the best', name)
 
 if __name__ == '__main__':
-    main()
+    good_word('Urban')
