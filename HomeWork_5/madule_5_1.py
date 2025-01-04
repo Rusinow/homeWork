@@ -8,10 +8,10 @@ class House:
         if (new_floor > self.number_of_floors) or (new_floor < 1):
             print('Такого этажа не существует')
         else:
-            i = 1
-            while i <= new_floor:
-                print(i)
-                i += 1
+            floor = 1
+            while floor <= new_floor:
+                print(floor)
+                floor += 1
 
 # Пример результата выполнения программы:
 # Исходные данные:
