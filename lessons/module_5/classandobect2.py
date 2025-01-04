@@ -11,10 +11,13 @@ class Human:
         self.age += 1
         print(f"today my birthday, i'm {self.age} yars old")
 
+    def __len__(self):
+        return self.age
 
-
+    def __del__(self):
+        print(f'{self.name} leave')
 
 den = Human('Denis', 22)
-max = Human('Maxim', 24)
-
-max.birthday()
+maks = Human('Maxim', 24)
+maks.birthday()
+print(len(den))
