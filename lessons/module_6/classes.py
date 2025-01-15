@@ -25,4 +25,4 @@ class Student(Human, StudentGroup):
 # print(human.name)
 student = Student('Maks', 'Urban', 'Python')
 
-print(Student.mro())
+print(Human.mro())
