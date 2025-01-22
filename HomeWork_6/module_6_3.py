@@ -1,7 +1,7 @@
 #Задача "Ошибка эволюции":
 from random import randint
 
-class Animal:                                 #Класс описывающий животных
+class Animal:
     def __init__(self, speed:int):
         self.speed = speed
     live = True
@@ -26,7 +26,7 @@ class Animal:                                 #Класс описывающий
     def speak(self):
         print(self.sound)
 
-class Bird(Animal):                         #Класс описывающий птиц. Наследуется от Animal
+class Bird(Animal):
     def __init__(self, speed):
         super().__init__(speed)
     brek = True
